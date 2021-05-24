@@ -23,15 +23,14 @@ public class MediaFinal {
             if (media >= 18){
                 System.out.println("Aprovado!");
                 
-            }else {
+            }else{
                        System.out.println("Recuperação!");                  
                  } //fim do 2º if
                  
-            //     }else {
-            //  System.out.println("Reprovado");
-            //  }    
+                }else {
+             System.out.println("Reprovado");
+             }    
          }   //fim do 1º if  
-        
 }
-}
+
  

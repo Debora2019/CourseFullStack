@@ -6,14 +6,14 @@ public class Teste {
       Scanner person = new Scanner(System.in);
        
         //Inserir o nome e ano que nascer. O resultado será mostrar a idade da pessoa
-        // int anoAtual=2021;
-        // System.out.println("Digite o seu nome completo: ");
-        // String nome = person.nextLine();
+        int anoAtual=2021;
+        System.out.println("Digite o seu nome completo: ");
+        String nome = person.nextLine();
 
-        // System.out.println("Digite o ano que voce nasceu:");
-        // int ano = person.nextInt();
+        System.out.println("Digite o ano que voce nasceu:");
+        int ano = person.nextInt();
 
-        // System.out.println("Resultado: " + (nome + ", sua idade é de " + (anoAtual - ano) + "." ));
+        System.out.println("Resultado:" + (nome +", sua idade é de " + (anoAtual - ano) + " anos." ));
 
 
         //Inserir o peso e a altura. Resultado mostrará o imc correspondente.

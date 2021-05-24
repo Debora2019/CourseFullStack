@@ -82,7 +82,7 @@ yearActual = new Scanner(System.in).nextInt();
 System.out.println("Insert the birthday year ");
 yearBirthday = new Scanner(System.in).nextInt();
 
-System.out.println("You born in:  " + day + " of " + nameMonth);
+System.out.println("You were born in:  " + day + " of " + nameMonth + " " + yearBirthday);
 int age =  yearActual - yearBirthday;
 System.out.println("You are " + age + " years");
     }
