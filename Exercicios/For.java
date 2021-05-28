@@ -5,8 +5,8 @@ public class For {
 
         for(numero = 10; numero >0; numero--) {
             System.out.println("O numero atual é " + numero);
-            if (numero==8){
-                System.out.println("encontrei o numero 8");
+            if (numero==2){
+                System.out.println("encontrei o numero 2");
                 System.out.println("vou parar agora ...");
                 break;
             }
