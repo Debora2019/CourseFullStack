@@ -12,7 +12,7 @@ public class Disciplina {
         return this.nota;
     }
 
-    public void setNota1(double nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 
@@ -20,11 +20,9 @@ public class Disciplina {
         return this.disciplina;
     }
 
-    public void setDisc1(String disciplina) {
+    public void setDisciplina(String disciplina) {
         this.disciplina = disciplina;
-    }
-
-    
+    }  
 
     //Método Equals
     @Override
@@ -43,7 +41,6 @@ public class Disciplina {
     public int hashCode() {
         return Objects.hash(nota, disciplina);
     }
-
 
     //Método toString()
     @Override
