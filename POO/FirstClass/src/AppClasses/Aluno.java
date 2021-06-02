@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import constantes.StatusAluno;
+
 public class Aluno {
     
    private String nome;
@@ -145,12 +147,12 @@ public class Aluno {
 
          if(media >= 50){
                 if(media >= 70){
-                     return "Aluno aprovado :)";
+                     return StatusAluno.APROVADO; // foi criada uma classe onde consta as variaveis estáticas e aqui elas sao usadas.
                 }else{
-                    return "Aluno em recuperação :(";
+                    return StatusAluno.RECUPERACAO;
                 }
          }else{
-             return "Aluno reprovado :(";
+             return StatusAluno.REPROVADO;
          }
 
         // como operador ternario
