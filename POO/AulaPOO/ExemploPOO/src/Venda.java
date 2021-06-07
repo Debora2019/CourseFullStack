@@ -12,6 +12,14 @@ public class Venda {
     
     private List<Produto> listaProduto = new ArrayList<Produto>();
 
+    private double totalVenda() {
+        double total = 0;
+        for (Produto produto : listaProduto) {
+            total += produto.getValor().doubleValue();
+        }
+        return total;
+    }
+
     public Long getId() {
         return this.id;
     }
@@ -45,6 +53,7 @@ public class Venda {
     }
 
     public BigDecimal getValorTotal() {
+        this.valorTotal = BigDecimal.valueOf(totalVenda());
         return this.valorTotal;
     }
 

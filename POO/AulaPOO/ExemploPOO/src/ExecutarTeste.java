@@ -14,6 +14,11 @@ public class ExecutarTeste {
         produto2.setNome("Impressora 3D");
         produto2.setValor(BigDecimal.valueOf(3654));
 
+        Produto produto3 = new Produto();
+        produto3.setId(3L);
+        produto3.setNome("Mesa 120x80cm");
+        produto3.setValor(BigDecimal.valueOf(125.00));
+
         Venda venda = new Venda();
         venda.setDescricaoVenda("Notebook");
         venda.setValorTotal(BigDecimal.valueOf(2500));
@@ -23,9 +28,12 @@ public class ExecutarTeste {
 
         venda.getListaProduto().add(produto1);
         venda.getListaProduto().add(produto2);
-        System.out.println("Descrição da venda: " + venda.getListaProduto());
+        venda.getListaProduto().add(produto3);   
+       
 
-        
+   
+
+        System.out.println("Valor da variavel total: " + venda.getValorTotal());
 
 }
 }
