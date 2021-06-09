@@ -3,23 +3,14 @@ package AppClasses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 import constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
     
-   private String nome;
-   private int idade;
-   private String dataNascimento;
-   private String registroGeral;
-   private String numeroCpf;
-   private String nomeMae;
-   private String nomePai;
    private String dataMatricula;
    private String nomeEscola;
    private String serieMatriculado;
-  
-  private List <Disciplina> disciplinas = new ArrayList <Disciplina>();
+   private List <Disciplina> disciplinas = new ArrayList <Disciplina>();
 
 
     public List<Disciplina> getDisciplinas() {
