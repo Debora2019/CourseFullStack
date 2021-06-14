@@ -1,5 +1,6 @@
 package AppClasses;
 
+//Classe filha da Superclasse Pessoa
 public class  Diretor extends Pessoa {
 
     private String registoEducacao;
@@ -32,6 +33,7 @@ public class  Diretor extends Pessoa {
     }
 
 
+
     @Override
     public String toString() {
         return "{" +
@@ -40,6 +42,13 @@ public class  Diretor extends Pessoa {
             ", titulacao='" + getTitulacao() + "'" +
             "}";
     }
+
+    @Override
+    public double salario() {
+       
+        return 12560;
+    }
+   
 
     
 }

@@ -1,5 +1,6 @@
 package AppClasses;
 
+//Classe filha da SuperClasse Pessoa
 public class Secretario extends Pessoa{
 
     private String registro;
@@ -38,6 +39,12 @@ public class Secretario extends Pessoa{
             ", nivelCargos='" + getNivelCargos() + "'" +
             ", experiencia='" + getExperiencia() + "'" +
             "}";
+    }
+
+    @Override // é um método sobrescrito
+    public double salario() {
+     
+        return 5870 * 0.89;
     }
 
     

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import constantes.StatusAluno;
 
+//Classe filha da Superclasse Pessoa
 public class Aluno extends Pessoa {
     
    private String dataMatricula;
@@ -148,11 +149,20 @@ public class Aluno extends Pessoa {
 
         // como operador ternario
      //return   media >= 70 ? "Aluno aprovado" : "Aluno reprovado";
- 
      }
 
-     //Método toString()
+     //identifica o método sobrescrito. dessa forma é possível mudar a regra de negocio, criar outros métodos e manter a consistencia de todo o codigo.
+  @Override
+  public boolean pessoaMaiorIdade() {
+    //o super está chamando a superclasse Pessoa
+      return super.pessoaMaiorIdade();
+  }
 
+  public String msgMaiorIdade() {
+      return this.pessoaMaiorIdade() ? "O aluno é maior de idade" : "Voce é menor de idade";
+  }
+
+     //Método toString()
     @Override
     public String toString() {
         return "{" +
@@ -172,8 +182,6 @@ public class Aluno extends Pessoa {
    
 
     //Método Equals
-
-
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -188,10 +196,15 @@ public class Aluno extends Pessoa {
    
 
 //Metodo HashCode
-
     @Override
     public int hashCode() {
         return Objects.hash(nome, idade, dataNascimento, registroGeral, numeroCpf, nomeMae, nomePai, dataMatricula, nomeEscola, serieMatriculado, disciplinas);
+    }
+
+    //Método com abstract criado na superclasse Pessoa. Tem que ser usado para todos os filhos!
+    @Override
+    public double salario() {
+        return 1690.00;
     }
   
    

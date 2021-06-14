@@ -1,7 +1,11 @@
 package AppClasses;
 
-public class Pessoa { //usa-se como os atributos como protected para que eles sejam usados tambem na classe filha. 
-    //Da super classe  (Pessoa) para a classe filha (Aluno). Assim é possível acessar os atributos da super classe na classe filha.
+
+//Herança - Classe Pai ou classe master ou superclasse - tem atributos comuns a todos os objetos filhos.
+public abstract class Pessoa {
+
+    //usa-se os atributos como protected para que eles sejam usados também nas classes filhas. 
+    //Assim é possível acessar os atributos da super classe na classe filha.
     protected String nome;
     protected int idade;
     protected String dataNascimento;
@@ -10,6 +14,8 @@ public class Pessoa { //usa-se como os atributos como protected para que eles se
     protected String nomeMae;
     protected String nomePai;
 
+    //método abstract que fica na classe pai ou superclasse é obrigatório para as classes filhas
+    public abstract double salario();
 
     public String getNome() {
         return this.nome;
@@ -65,6 +71,11 @@ public class Pessoa { //usa-se como os atributos como protected para que eles se
 
     public void setNomePai(String nomePai) {
         this.nomePai = nomePai;
+    }
+
+    // metodo que retorna true se for 18 anos pra cima, caso contrario será falso.
+    public boolean pessoaMaiorIdade() {
+        return idade >=18 ;
     }
 
 

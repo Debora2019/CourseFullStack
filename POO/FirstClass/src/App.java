@@ -12,10 +12,7 @@ public class App {
         String login = JOptionPane.showInputDialog("Login:");
         String senha = JOptionPane.showInputDialog("Senha:");
 
-        if(login.equalsIgnoreCase("debora" ) && senha.equalsIgnoreCase("123")){
-            
-           
-       
+        if(login.equalsIgnoreCase("debora" ) && senha.equalsIgnoreCase("123")){     
 
         List<Aluno> alunos = new ArrayList<Aluno>(); // criando uma lista de alunos
 
