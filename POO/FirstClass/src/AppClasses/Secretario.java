@@ -1,12 +1,48 @@
 package AppClasses;
 
+import AppClasses.interfaces.PermitirAcesso;
+
 //Classe filha da SuperClasse Pessoa
-public class Secretario extends Pessoa{
+public class Secretario extends Pessoa implements PermitirAcesso{
 
     private String registro;
     private String nivelCargos;
     private String experiencia;
 
+    private String login;
+    private String senha;
+
+    //constructor com parametro
+    public Secretario(String login, String senha) {
+       this.login = login;
+       this.senha = senha;
+    }
+
+       // constructor padrao
+    public Secretario() {
+    }
+    
+
+
+    @Override // é um método sobrescrito
+    public double salario() {
+     
+        return 5870 * 0.89;
+    }
+
+       
+    @Override
+    public boolean autenticar(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
+
+        return autenticar();
+    }
+
+    @Override
+    public boolean autenticar() {
+        return login.equals("admin") && senha.equals("admin");
+    }
 
     public String getRegistro() {
         return this.registro;
@@ -41,11 +77,5 @@ public class Secretario extends Pessoa{
             "}";
     }
 
-    @Override // é um método sobrescrito
-    public double salario() {
-     
-        return 5870 * 0.89;
-    }
 
-    
 }

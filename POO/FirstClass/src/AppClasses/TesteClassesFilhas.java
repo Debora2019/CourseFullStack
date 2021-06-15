@@ -26,7 +26,14 @@ public class TesteClassesFilhas {
         System.out.println("Salário do secretário: " + secretario.salario());
         System.out.println("Salário do  diretor: " + diretor.salario());
     
+        teste(aluno);
+        teste(secretario);
+        teste(diretor);
 
+    }
+
+    public static void teste (Pessoa pessoa) {
+        System.out.println("Eu conheço essa pessoa: " + pessoa.getNome() + " e o salario é de: " + pessoa.salario());
 
     }
 }

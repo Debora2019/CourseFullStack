@@ -4,6 +4,8 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import AppClasses.Aluno;
 import AppClasses.Disciplina;
+import AppClasses.Secretario;
+import AppClasses.interfaces.PermitirAcesso;
 import constantes.StatusAluno;
 
 public class App {
@@ -12,7 +14,11 @@ public class App {
         String login = JOptionPane.showInputDialog("Login:");
         String senha = JOptionPane.showInputDialog("Senha:");
 
-        if(login.equalsIgnoreCase("debora" ) && senha.equalsIgnoreCase("123")){     
+
+
+        PermitirAcesso permitirAcesso = new Secretario(login, senha);
+       
+        if(permitirAcesso.autenticar()){  //se der true, entao acessa, se der false, nao acessa.   
 
         List<Aluno> alunos = new ArrayList<Aluno>(); // criando uma lista de alunos
 
@@ -112,6 +118,11 @@ public class App {
     for(Aluno aluno : maps.get(StatusAluno.REPROVADO)){
           System.out.println(aluno.getNome() +" - " + aluno.getAlunoAprovado2()+ " - " + "Média: " + aluno.getMediaNota());
     }
+
+}else{
+    JOptionPane.showMessageDialog(null, "Acesso negado!");
+}
+
   
 
 
@@ -167,4 +178,4 @@ public class App {
         // }
     }
 }
- }
+ 
