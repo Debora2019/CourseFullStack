@@ -5,22 +5,21 @@ import javax.swing.JOptionPane;
 import AppClasses.Aluno;
 import AppClasses.Disciplina;
 import AppClasses.Secretario;
+import AppClasses.classesAuxiliares.FuncaoAutenticacao;
 import AppClasses.interfaces.PermitirAcesso;
 import constantes.StatusAluno;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+
         
         String login = JOptionPane.showInputDialog("Login:");
         String senha = JOptionPane.showInputDialog("Senha:");
+    
+        if(new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()){  //so quem tem a chave é que tem permissão para entrar.  
 
-
-
-        PermitirAcesso permitirAcesso = new Secretario(login, senha);
-       
-        if(permitirAcesso.autenticar()){  //se der true, entao acessa, se der false, nao acessa.   
-
-        List<Aluno> alunos = new ArrayList<Aluno>(); // criando uma lista de alunos
+        List<Aluno> alunos = new ArrayList<Aluno>(); // criando uma lista de alunos ;
 
         //é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores.
         HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -30,7 +29,7 @@ public class App {
       //  List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();// craindo uma lista de alunos recuperacao
       //  List<Aluno> alunosReprovados = new ArrayList<Aluno>(); // criando uma lista de alunos reprovados
 
-        for(int qtd=1; qtd<=5; qtd++) { // quantidade de vezes que fará a pergunta. Será perguntado o nome de 5 alunos
+        for(int qtd=1; qtd<=2; qtd++) { // quantidade de vezes que fará a pergunta. Será perguntado o nome de 5 alunos
 
         String nome = JOptionPane.showInputDialog("Qual o nome do aluno "+qtd+"?");
         // String idade = JOptionPane.showInputDialog("Digite a idade do aluno");
@@ -177,5 +176,5 @@ public class App {
         //    }
         // }
     }
+
 }
- 
