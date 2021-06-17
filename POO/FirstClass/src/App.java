@@ -1,18 +1,29 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 import AppClasses.Aluno;
 import AppClasses.Disciplina;
 import AppClasses.Secretario;
 import AppClasses.classesAuxiliares.FuncaoAutenticacao;
+import AppClasses.exception.ExceptionProcessarNota;
 import AppClasses.interfaces.PermitirAcesso;
 import constantes.StatusAluno;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
+        // try{ 
 
+        // try{
+        //     File file = new File("c://lines.txt");
+        //     Scanner scanner = new Scanner(file);
+        // } catch (FileNotFoundException e){
+        //    throw new ExceptionProcessarNota("Foi encontrado um erro no processamento do arquivo.");
+        // }
         
         String login = JOptionPane.showInputDialog("Login:");
         String senha = JOptionPane.showInputDialog("Senha:");
@@ -175,6 +186,11 @@ public class App {
         //        System.out.println(disciplina.getDisciplina() + "--> " + disciplina.getNota());
         //    }
         // }
-    }
+    // }catch(Exception e){//capturar todas as exceções que não foram previstas
+    //     e.printStackTrace();
+    //     JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
+    // }
+
+}
 
 }
