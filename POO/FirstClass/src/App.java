@@ -75,7 +75,7 @@ public class App {
             String notaDisciplina = JOptionPane.showInputDialog("Digite a nota "+i+":" );
             Disciplina disciplina = new Disciplina();
             disciplina.setDisciplina(nomeDisciplina);
-            disciplina.setNota(Double.valueOf(notaDisciplina)); // tem q converter de String para Double.
+           // disciplina.setNota(Double.valueOf(notaDisciplina)); // tem q converter de String para Double.
 
             aluno1.getDisciplinas().add(disciplina); // add uma disciplina no objeto aluno
         }
