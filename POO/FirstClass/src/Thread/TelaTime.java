@@ -74,28 +74,36 @@ public class TelaTime extends JDialog{
         jPanel.add(jButton2, gridBagConstraints);
 
         //ação do botão
-        jButton.addActionListener((ActionListener) new ActionListener() { 
+        jButton.addActionListener((ActionListener) new ActionListener() { //simulando 100 envios de email em massa.
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+
+                if(fila == null){
+                    fila = new ImplementarFilaThread();//vai continuar a rodar.....ao clicar no stop, pára e ao clicar no start, volta a correr da onde parou.
+                    fila.start();
+                }
+
+                for(int quant=0; quant<100; quant++) {
+
              ObjetoFilaThread filaThread = new ObjetoFilaThread();
-             filaThread.setNome(mostraTempo.getText());
-             filaThread.setEmail(mostraTempo2.getText());
+             filaThread.setNome("Nome: " + mostraTempo.getText());
+             filaThread.setEmail("Email: " + quant + " - " + mostraTempo2.getText());
 
             fila.add(filaThread);
                
+        }
             }
         });
 
         jButton2.addActionListener((ActionListener) new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
-                          }
+                fila.stop();
+                fila = null;
+            }
         });
 
         fila.start();
-
         add(jPanel, BorderLayout.WEST);
         // sempre será o ultimo comando
         setVisible(true); 

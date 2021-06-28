@@ -19,7 +19,7 @@ public class ImplementarFilaThread extends Thread{
 
         System.out.println("Fila rodando...");
 
-        parei na aula 14.3
+      
 
         while(true) {
 
@@ -37,12 +37,12 @@ public class ImplementarFilaThread extends Thread{
 
                 System.out.println("-------------------------------------------------------------------------");
 
-                System.out.println(processar.getEmail());
                 System.out.println(processar.getNome());
+                System.out.println(processar.getEmail());
                 iteracao.remove();//remove
     
                 try {
-                    Thread.sleep(100);//dar um tempo para descarga da memória
+                    Thread.sleep(1000);//dar um tempo para descarga da memória
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
