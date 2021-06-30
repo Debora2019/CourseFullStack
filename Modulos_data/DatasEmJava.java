@@ -39,5 +39,6 @@ System.out.println("Objeto Date: " + simpleDateFormat.parse("1980-07-25 20:10.1"
 
 simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 System.out.println("Objeto Date: " + simpleDateFormat.parse("1980-07-25"));
+
     }
 }
